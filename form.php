@@ -1,6 +1,6 @@
 <?php
 $errors = []; 
-$name = $age = $phone = $email = $address = $sex = "";
+$name = $age = $phone = $email = $address = $question =$sex = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
@@ -34,8 +34,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // 5_住所：ひらがな、カタカナ、漢字、英字（数字含む）のみ
-    if (empty($address) || !preg_match("/^[ぁ-んァ-ヶー一-龠ａ-ｚＡ-Ｚa-zA-Z0-9]+$/u", $address)) {
-        $errors[] = "address：名前はひらがな、カタカナ、漢字のみ使用できます。";
+    if (empty($address) || !preg_match("/^[ぁ-んァ-ヶー一-龠ａ-ｚＡ-Ｚa-zA-Z]+$/u", $address)) {
+        $errors[] = "address：住所はひらがな、カタカナ、漢字のみ使用できます。";
     }
 
     
@@ -74,7 +74,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </ul>
         <?php endif; ?>
 
-        <form action="form.php" method="POST"> <label for="name">名前:</label>
+        <form action="confilm.php" method="POST">
+            <label for="name">名前:</label>
             <input type="text" id="name" name="name" value="<?php echo htmlspecialchars($name); ?>">
 
             <label for="age">年齢:</label>
@@ -90,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="text" id="address" name="address" value="<?php echo htmlspecialchars($address); ?>">
 
             <label for="question">質問:</label>
-            <input type="text" id="question" name="question" value="<?php echo htmlspecialchars($address); ?>">
+            <input type="text" id="question" name="question" value="<?php echo htmlspecialchars($question); ?>">
 
             <label for="sex">性別:</label>
             <select id="sex" name="sex">
