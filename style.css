@@ -14,26 +14,34 @@ body {
     width: 80%;
     max-width: 400px;
     
-    /* --- 修正・追加ポイント --- */
-    margin: 20px auto 0;  /* 上に20px、左右をautoにすることで中央配置 */
-    display: block;       /* 確実にブロック要素として扱い、margin: auto を効かせる */
-    /* -------------------------- */
+    
+    margin: 20px auto 0;  
+    display: block;       
 
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: left;     /* フォーム内のテキストは左寄せを維持 */
+    text-align: left;     
 }
-  
+
+
+label {
+    display: block;     
+    width: 80%;
+    margin: 15px auto 5px; 
+    font-weight: bold;
+    text-align: left;
+}
+
 input,
 textarea,
 select {
-  display: block;      /* ブロック要素にすることで margin: auto を有効にする */
-  width: 80%;
-  padding: 10px;
-  margin: 10px auto;   /* 上下に10px、左右はautoで中央配置 */
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
+    display: block;
+    width: 80%;
+    padding: 10px;
+    margin: 0 auto 10px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
 /* textarea {
