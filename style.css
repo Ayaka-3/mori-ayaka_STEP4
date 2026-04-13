@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightgray;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1280px;
+  }
+  
+
+  form {
+    background-color: white;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    
+    /* --- 修正・追加ポイント --- */
+    margin: 20px auto 0;  /* 上に20px、左右をautoにすることで中央配置 */
+    display: block;       /* 確実にブロック要素として扱い、margin: auto を効かせる */
+    /* -------------------------- */
+
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;     /* フォーム内のテキストは左寄せを維持 */
+}
+  
+input,
+textarea,
+select {
+  display: block;      /* ブロック要素にすることで margin: auto を有効にする */
+  width: 80%;
+  padding: 10px;
+  margin: 10px auto;   /* 上下に10px、左右はautoで中央配置 */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* textarea {
+  resize: vertical;
+  height: 120px;
+  color: rgb(58, 47, 40);
+} */
+
+button {
+  background-color: royalblue;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 20%;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
